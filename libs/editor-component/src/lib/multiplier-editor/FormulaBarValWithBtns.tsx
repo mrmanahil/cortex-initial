@@ -1,5 +1,6 @@
 import { Box, Button, Form, FormField, Text } from 'grommet';
-import { SettingsOption } from 'grommet-icons';
+import { User } from 'grommet-icons';
+import InputBox from '../components/InputBox';
 
 const FormulaBarValWithBtns = () => {
   let iconWidth = {
@@ -38,7 +39,7 @@ const FormulaBarValWithBtns = () => {
   return (
     <>
       <Box direction="row" pad="xsmall">
-        <SettingsOption color="#76A9FF" style={iconWidth} />
+        <User color="#76A9FF" style={iconWidth} />
         <Text style={label}>Multiplier Formula</Text>
         <Box direction="row" gap="xsmall" style={btnLeft}>
           <Button style={dangerBtn} label="Validate" />

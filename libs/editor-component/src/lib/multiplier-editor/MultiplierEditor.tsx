@@ -1,4 +1,4 @@
-import { Box } from 'grommet';
+import { Box, Grommet } from 'grommet';
 import AttributeVarTable from './AttributeVarTable';
 import CommentEntryBox from './CommentEntryBox';
 import FormulaBar from './FormulaBar';
@@ -18,7 +18,7 @@ const MultiplierEditor = () => {
   };
 
   return (
-    <>
+    <Grommet>
       <Box width="large" background="#0c2146" style={TableContainer}>
         <FormulaBar />
         <AttributeVarTable />
@@ -31,7 +31,7 @@ const MultiplierEditor = () => {
         <FormulaBarValWithBtns />
         <CommentEntryBox />
       </Box>
-    </>
+    </Grommet>
   );
 };
 
