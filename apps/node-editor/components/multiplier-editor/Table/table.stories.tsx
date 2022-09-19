@@ -2,16 +2,14 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { MultiplierEditor } from './multiplier';
+import { Table } from './table';
 
 export default {
-  title: 'Multiplier Editor',
-  component: MultiplierEditor,
-} as ComponentMeta<typeof MultiplierEditor>;
+  title: 'Components',
+  component: Table,
+} as ComponentMeta<typeof Table>;
 
-const Template: ComponentStory<typeof MultiplierEditor> = (args) => (
-  <MultiplierEditor {...args} />
-);
+const Template: ComponentStory<typeof Table> = (args) => <Table {...args} />;
 
 const border = {
   color: '#76a9ff',
@@ -62,10 +60,9 @@ let label = {
   color: '#76A9FF',
 };
 
-export const Multiplier = Template.bind({});
+export const TableBox = Template.bind({});
 
-Multiplier.args = {
-  text: 'Multiplier Editor!',
+TableBox.args = {
   border: border,
   borderBottom: borderBottom,
   unitColor: unitColor,

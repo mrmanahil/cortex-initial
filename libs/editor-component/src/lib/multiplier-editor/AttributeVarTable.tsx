@@ -9,56 +9,14 @@ import {
 } from 'grommet';
 import { SettingsOption } from 'grommet-icons';
 
-const AttributeVarTable = () => {
-  const border = {
-    color: '#76a9ff',
-    size: 'medium',
-  };
-  const borderBottom = {
-    borderBottom: '2px solid #76A9FF',
-  };
-  const unitColor = {
-    color: '#828282',
-  };
-
-  const tableData = [
-    {
-      attrId: '',
-      attrVariable: 'InMult',
-      attrValue: '99999.99',
-      attrUnit: 'Unit',
-    },
-    {
-      attrId: 'A1A1',
-      attrVariable: 'Variable A',
-      attrValue: '99999.99',
-      attrUnit: 'Unit',
-    },
-    {
-      attrId: 'B2B2',
-      attrVariable: 'Variable A',
-      attrValue: '99999.99',
-      attrUnit: 'Unit',
-    },
-    {
-      attrId: '',
-      attrVariable: 'ResMult',
-      attrValue: '99999.99',
-      attrUnit: 'Unit',
-    },
-  ];
-
-  let iconWidth = {
-    width: '50px',
-    marginLeft: '-10px',
-  };
-
-  let label = {
-    marginBottom: '2px',
-    marginLeft: '-2px',
-    color: '#76A9FF',
-  };
-
+const AttributeVarTable = ({
+  iconWidth,
+  label,
+  border,
+  tableData,
+  unitColor,
+  borderBottom,
+}: any) => {
   return (
     <>
       <Box direction="row" pad="xsmall">
@@ -83,7 +41,7 @@ const AttributeVarTable = () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {tableData.map((item, index) => {
+          {tableData.map((item: any, index: any) => {
             return (
               <TableRow>
                 <TableCell scope="row" style={unitColor} key={index}>
