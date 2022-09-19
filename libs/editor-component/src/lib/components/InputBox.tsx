@@ -11,6 +11,7 @@ const InputBox = ({
   Select,
   SelectPlaceholder,
   options,
+  value,
 }: any) => {
   let iconWidth = {
     width: '50px',
@@ -24,43 +25,52 @@ const InputBox = ({
   };
 
   let FormFieldBorderBottom = {
-    borderBottom: '1px solid #76a9ff',
+    borderBottom: '1px solid #76A9FF',
+    // fontSize: '15px',
+    padding: '0px',
   };
 
   let validationError = {
-    paddingLeft: '11px',
-    paddingTop: '2px',
+    paddingLeft: '10px',
     color: '#828282',
   };
 
   let dangerBtn = {
-    border: '1px solid red',
-    background: 'red',
+    border: '1px solid #C8372D',
+    background: '#C8372D',
     display: 'flex',
     marginLeft: 'auto',
   };
 
   let systemJoinLink = {
-    color: '#76A9FF',
+    color: '#2979FF',
     cursor: 'pointer',
     textDecoration: 'underline',
+  };
+
+  let padding = {
+    padding: '0px',
+    margin: '0px',
   };
 
   return (
     <>
       <Box direction="row" pad="xsmall">
-        <Icon color="#76A9FF" style={iconWidth} />
+        <Icon color="iconColor" style={iconWidth} />
         <Text style={label}>{Label}</Text>
         {Button ? <Button style={dangerBtn} label={ButtonLabel} /> : null}
       </Box>
-      <Form color="white">
+      <Form style={padding}>
         <FormField
           placeholder={placeholder}
           margin="0"
           style={FormFieldBorderBottom}
+          type="text"
+          value={value}
         >
           {Select ? (
             <Select
+              style={padding}
               name="select"
               placeholder={SelectPlaceholder}
               options={options}

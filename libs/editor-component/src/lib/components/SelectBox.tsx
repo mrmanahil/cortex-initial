@@ -24,11 +24,15 @@ const SelectBox = ({ Icon, Label, placeholder, helperText }: any) => {
     color: '#828282',
   };
 
+  let marginLeft = {
+    marginLeft: '10px',
+  };
+
   return (
     <>
-      <Box direction="column" pad="xsmall" width="49%">
+      <Box direction="column" style={marginLeft} width="50%">
         <Box direction="row" pad="xsmall">
-          <Icon color="#76A9FF" style={iconWidth} />
+          <Icon color="iconColor" style={iconWidth} />
           <Text style={label}>{Label}</Text>
         </Box>
         <FormField name="select" margin="0px">

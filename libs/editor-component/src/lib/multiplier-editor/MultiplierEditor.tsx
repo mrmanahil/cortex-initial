@@ -3,12 +3,9 @@ import AttributeVarTable from './AttributeVarTable';
 import CommentEntryBox from './CommentEntryBox';
 import FormulaBar from './FormulaBar';
 import FormulaBarValWithBtns from './FormulaBarValWithBtns';
-import MeasurementUnit from './MeasurementUnit';
-import OverRideValue from './OverRideValue';
-import TextBox from './textbox/TextBox';
-import TextFieldWithBtn from './textbox/TextFieldWithBtn';
-import TextFieldWithHyperlinks from './textbox/TextFieldWithHyperlinks';
-import TextFieldWithMultVal from './textbox/TextFieldWithMultVal';
+import MultiplierFormulaResult from './MultiplierFormulaResult';
+import OutputMultiplier from './OutputMultiplier';
+import UserMultipleValue from './UserMultipleValue';
 
 const MultiplierEditor = () => {
   const TableContainer = {
@@ -18,17 +15,28 @@ const MultiplierEditor = () => {
   };
 
   return (
-    <Grommet>
-      <Box width="large" background="#0c2146" style={TableContainer}>
+    <Grommet
+      theme={{
+        global: {
+          colors: {
+            backgroundColor: '#0C2146',
+            iconColor: '#76A9FF',
+          },
+        },
+      }}
+    >
+      <Box
+        width="large"
+        background="backgroundColor"
+        style={TableContainer}
+        pad="small"
+      >
         <FormulaBar />
         <AttributeVarTable />
-        <MeasurementUnit />
-        <TextBox />
-        <TextFieldWithBtn />
-        <TextFieldWithHyperlinks />
-        <TextFieldWithMultVal />
-        <OverRideValue />
         <FormulaBarValWithBtns />
+        <MultiplierFormulaResult />
+        <UserMultipleValue />
+        <OutputMultiplier />
         <CommentEntryBox />
       </Box>
     </Grommet>
