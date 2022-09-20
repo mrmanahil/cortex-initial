@@ -1,6 +1,6 @@
 import { Box, Grommet } from 'grommet';
-import InputBox from 'libs/editor-component/src/lib/components/InputBox';
 import { SettingsOption } from 'grommet-icons';
+import InputWithMultipleLink from 'libs/editor-component/src/lib/components/InputWithMultipleLink';
 
 export interface TestProps {
   Input: string;
@@ -8,7 +8,11 @@ export interface TestProps {
   Label: string;
   placeholder: string;
   helperText: string;
-  HelperTextLink: string;
+  firstBtn: string;
+  secondBtn: string;
+  thirdBtn: string;
+  fourthBtn: string;
+  fifthBtn: string;
 }
 
 export const InputField = (props: TestProps) => {
@@ -36,12 +40,15 @@ export const InputField = (props: TestProps) => {
           style={TableContainer}
           pad="small"
         >
-          <InputBox
+          <InputWithMultipleLink
             Icon={SettingsOption}
             Label={props.Label}
             placeholder={props.placeholder}
             helperText={props.helperText}
-            HelperTextLink={props.HelperTextLink}
+            firstBtn={props.firstBtn}
+            secondBtn={props.secondBtn}
+            thirdBtn={props.thirdBtn}
+            fourthBtn={props.fourthBtn}
             value={props.value}
           />
         </Box>

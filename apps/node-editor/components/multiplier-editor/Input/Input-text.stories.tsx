@@ -21,5 +21,9 @@ Input.args = {
   Label: 'Input Multiplier',
   placeholder: 'Value',
   helperText: 'Value Inherited From',
-  HelperTextLink: ' AAAAAA, BBBBBB, CCCCCC, DDDDDD',
+  firstBtn: 'AAAAAA',
+  secondBtn: ' BBBBBB',
+  thirdBtn: ' CCCCCC',
+  fourthBtn: ' DDDDDD',
+  fifthBtn: ' FFFFFF',
 };

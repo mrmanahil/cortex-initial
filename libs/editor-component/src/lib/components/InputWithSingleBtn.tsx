@@ -1,17 +1,12 @@
-import { Box, Form, FormField, Text } from 'grommet';
+import { Box, Button, Form, FormField, Text } from 'grommet';
 
-const InputBox = ({
+const InputWithSingleBtn = ({
   Icon,
   Label,
   placeholder,
-  helperText,
-  Button,
-  ButtonLabel,
-  HelperTextLink,
-  Select,
-  SelectPlaceholder,
-  options,
   value,
+  helperText,
+  singleLink,
 }: any) => {
   let iconWidth = {
     width: '50px',
@@ -33,14 +28,6 @@ const InputBox = ({
     paddingLeft: '10px',
     color: '#828282',
   };
-
-  let dangerBtn = {
-    border: '1px solid #C8372D',
-    background: '#C8372D',
-    display: 'flex',
-    marginLeft: 'auto',
-  };
-
   let systemJoinLink = {
     color: '#2979FF',
     cursor: 'pointer',
@@ -57,7 +44,6 @@ const InputBox = ({
       <Box direction="row" pad="xsmall">
         <Icon color="iconColor" style={iconWidth} />
         <Text style={label}>{Label}</Text>
-        {Button ? <Button style={dangerBtn} label={ButtonLabel} /> : null}
       </Box>
       <Form style={padding}>
         <FormField
@@ -66,26 +52,23 @@ const InputBox = ({
           style={FormFieldBorderBottom}
           type="text"
           value={value}
-        >
-          {Select ? (
-            <Select
-              style={padding}
-              name="select"
-              placeholder={SelectPlaceholder}
-              options={options}
-              valueKey="value"
-            />
-          ) : null}
-        </FormField>
+        ></FormField>
       </Form>
       <span style={validationError}>
         {helperText}
-        {HelperTextLink ? (
-          <span style={systemJoinLink}>{HelperTextLink}</span>
+        {singleLink ? (
+          <span>
+            <Button
+              style={systemJoinLink}
+              onClick={() => console.log('Single Link')}
+            >
+              {singleLink}
+            </Button>
+          </span>
         ) : null}
       </span>
     </>
   );
 };
 
-export default InputBox;
+export default InputWithSingleBtn;

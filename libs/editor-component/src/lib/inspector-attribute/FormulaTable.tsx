@@ -30,8 +30,8 @@ const FormulaTable = ({
         })}
       </TableHead>
       <TableBody>
-        {rows.map((row: any) => (
-          <TableRow key={row.name}>
+        {rows.map((row: any, index: any) => (
+          <TableRow key={index}>
             <TableDataCell>{row.s_no}</TableDataCell>
             <TdAttribute>{row.att_variable}</TdAttribute>
             <TableDataCell>{row.att_value}</TableDataCell>

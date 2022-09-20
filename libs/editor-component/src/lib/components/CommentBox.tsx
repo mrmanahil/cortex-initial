@@ -25,6 +25,7 @@ const CommentBox = ({ Icon, Label, placeholder }: any) => {
       </Box>
       <Form>
         <FormField
+          title="test"
           placeholder={placeholder}
           margin="0"
           style={FormFieldBorderBottom}

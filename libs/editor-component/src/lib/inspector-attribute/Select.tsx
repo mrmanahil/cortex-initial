@@ -1,4 +1,3 @@
-import React from 'react';
 import { Icon as InputIcon } from '../atoms/Input';
 import { Select } from '../atoms/Select';
 import { InputBox } from '../atoms/Input';

@@ -47,8 +47,16 @@ const InputBoxWithMultBtns = ({
         <Icon color="iconColor" style={iconWidth} />
         <Text style={label}>{Label}</Text>
         <Box direction="row" gap="xsmall" style={btnLeft}>
-          <Button style={dangerBtn} label={ValidateBtn} />
-          <Button style={dangerBtn} label={OverrideBtn} />
+          <Button
+            style={dangerBtn}
+            label={ValidateBtn}
+            onClick={() => console.log('Validate Btn')}
+          />
+          <Button
+            style={dangerBtn}
+            label={OverrideBtn}
+            onClick={() => console.log('Override Btn')}
+          />
         </Box>
       </Box>
       <Form color="white">
